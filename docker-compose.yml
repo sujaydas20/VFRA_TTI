@@ -1,0 +1,108 @@
+services:
+  # ============================================================================
+  # PostgreSQL Database Service
+  # ============================================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: tti_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tti_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tti_dev_password_change_in_production}
+      POSTGRES_DB: ${POSTGRES_DB:-tti_dev}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/docker/postgres/init-dev.sql:/docker-entrypoint-initdb.d/init-dev.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tti_user} -d ${POSTGRES_DB:-tti_dev}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - tti_network
+
+  # ============================================================================
+  # Redis In-Memory Cache & Message Broker Foundation
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: tti_redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - tti_network
+
+  # ============================================================================
+  # FastAPI Application Backend
+  # ============================================================================
+  backend:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.backend
+    container_name: tti_backend
+    restart: unless-stopped
+    environment:
+      TTI_ENV: development
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-tti_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tti_dev_password_change_in_production}
+      POSTGRES_DB: ${POSTGRES_DB:-tti_dev}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      TTI_EVIDENCE_STORAGE_PATH: /app/evidence_store
+      TTI_TELEGRAM_CONNECTOR_ACTIVE: "false"
+      TTI_DARKWEB_CONNECTOR_ACTIVE: "false"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - evidence_storage:/app/evidence_store
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - tti_network
+
+  # ============================================================================
+  # Vite + React + TypeScript Frontend
+  # ============================================================================
+  frontend:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.frontend
+    container_name: tti_frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    depends_on:
+      - backend
+    networks:
+      - tti_network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  evidence_storage:
+    driver: local
+
+networks:
+  tti_network:
+    driver: bridge
