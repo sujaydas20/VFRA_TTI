@@ -1,0 +1,104 @@
+category: upi_fraud
+display_name: UPI and Payment Fraud
+description: Fraudulent solicitations involving UPI PIN demands, QR code phishing,
+  and collect requests.
+default_severity: HIGH
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: upi_fraud_pin_demand
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - UPI PIN
+    - यूपीआई पिन
+    - UPI pin daalo
+    proximity:
+    - - upi
+      - pin
+      - 4
+    - - upi
+      - transfer
+      - 4
+    - - पिन
+      - टाका
+      - 4
+    - - पिन
+      - डालो
+      - 4
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Solicitation to enter UPI PIN, commonly used in unauthorized
+    debit frauds
+  is_enabled: true
+  is_reviewed: false
+- rule_id: upi_fraud_qr_collect
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - QR code scan
+    - क्यूआर कोड
+    proximity:
+    - - qr
+      - scan
+      - 4
+    - - qr
+      - bheja
+      - 4
+  weight: 1.5
+  default_severity: HIGH
+  explanation_template: QR code payment scam where victim scans code believing they
+    will receive funds
+  is_enabled: true
+  is_reviewed: false
+- rule_id: upi_fraud_receive_pin_myth
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - receive money PIN
+    - पैसे घेण्यासाठी पिन
+    - पैसे लेने के लिए पिन
+    proximity:
+    - - receive
+      - pin
+      - 5
+    - - पैसे
+      - पिन
+      - 4
+    - - paise
+      - pin
+      - 4
+  weight: 1.8
+  default_severity: HIGH
+  explanation_template: False claim that PIN is required to receive money
+  is_enabled: true
+  is_reviewed: false
+- rule_id: upi_fraud_vpa_entity
+  rule_type: entity
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    entity_type: upi
+  weight: 1.0
+  default_severity: MEDIUM
+  explanation_template: Structured UPI VPA handle identified in payment solicitation
+  is_enabled: true
+  is_reviewed: false

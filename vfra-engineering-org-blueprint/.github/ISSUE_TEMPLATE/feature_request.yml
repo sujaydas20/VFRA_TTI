@@ -1,0 +1,64 @@
+name: "Feature Request"
+description: "Propose an architectural enhancement, new capability, or optimization"
+title: "[FEATURE]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Propose an Engineering Feature
+        Features must align with the phased roadmap and respect our non-negotiable security rules.
+
+  - type: dropdown
+    id: phase_alignment
+    attributes:
+      label: Target Development Phase
+      description: Which architectural milestone does this proposal belong to?
+      options:
+        - "Phase 1: Foundation & Baseline Verification"
+        - "Phase 2: Authentication, Tenant Scoping & Connector Sandbox"
+        - "Phase 3: Authorized Ingestion, Tor Routing & Evidence Verification"
+        - "Phase 4: Threat Intelligence Extraction & Analyst Decisioning"
+        - "Phase 5: Reporting, Alert Dispatch & Offline Model Evaluation"
+        - "Cross-Cutting / Infrastructure / Tooling"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: What challenge or architectural limitation does this feature address?
+      placeholder: "Currently, our connectors..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution / Implementation
+      description: Detailed technical explanation of how this feature should be implemented.
+      placeholder: "Introduce an abstract interface in `backend/app/...` that provides..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: security_considerations
+    attributes:
+      label: Security & Multi-Tenancy Considerations
+      description: How does this feature maintain tenant isolation, untrusted input containment, and least privilege?
+      placeholder: "This feature enforces `tenant_id` at the database level and ensures..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: governance_checks
+    attributes:
+      label: Governance Compliance
+      options:
+        - label: "This feature does NOT require hardcoded credentials"
+          required: true
+        - label: "This feature preserves human-in-the-loop oversight (no unmonitored autonomous loops)"
+          required: true
+        - label: "This feature respects evidence segregation rules"
+          required: true

@@ -1,0 +1,55 @@
+# ==============================================================================
+# VFRA Engineering — CODEOWNERS Example Template
+# ==============================================================================
+# This file establishes mandatory review routing based on changed file paths.
+# When a Pull Request modifies paths matching these patterns, GitHub automatically
+# requests review from the designated team.
+#
+# Syntax reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# ==============================================================================
+
+# Default fallback owners for the entire repository
+* @vfra-engineering/core-maintainers
+
+# ==============================================================================
+# Critical Security Boundaries (Mandatory Security Reviewer Sign-Off)
+# ==============================================================================
+# Any change to authorization, tenant extraction, or crypto primitives
+/backend/app/core/security.py @vfra-engineering/security-reviewers
+/backend/app/core/errors.py @vfra-engineering/security-reviewers
+
+# Untrusted input sanitization regexes & algorithms
+/backend/app/ingestion/sanitizer.py @vfra-engineering/security-reviewers @vfra-engineering/backend-team
+
+# Evidence storage segregation and cryptographic hash verification
+/backend/app/evidence/ @vfra-engineering/security-reviewers @vfra-engineering/backend-team
+
+# CI/CD Workflows, automated security scanning, and deployment definitions
+/.github/workflows/ @vfra-engineering/security-reviewers @vfra-engineering/core-maintainers
+/.github/CODEOWNERS @vfra-engineering/security-reviewers @vfra-engineering/owners
+
+# ==============================================================================
+# Database & Relational Persistence
+# ==============================================================================
+# Model schemas enforcing TenantAwareModel and migration versions
+/backend/app/database/models/ @vfra-engineering/backend-team @vfra-engineering/security-reviewers
+/backend/alembic/ @vfra-engineering/backend-team
+
+# ==============================================================================
+# Domain & Functional Ownership
+# ==============================================================================
+# Backend application & API routing
+/backend/ @vfra-engineering/backend-team
+
+# Modular connector interfaces and stubs
+/backend/app/connectors/ @vfra-engineering/backend-team
+
+# Frontend application, components, and dashboard
+/frontend/ @vfra-engineering/frontend-team
+
+# Infrastructure, Docker Compose, and Container definitions
+/infra/ @vfra-engineering/core-maintainers
+/docker-compose.yml @vfra-engineering/core-maintainers
+
+# Architecture documentation and security baseline guides
+/docs/ @vfra-engineering/core-maintainers @vfra-engineering/security-reviewers

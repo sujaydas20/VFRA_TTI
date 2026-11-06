@@ -1,0 +1,108 @@
+{"text": "Sir aapka KYC expire ho gaya, abhi link par click karke update karo warna account band", "language": "hinglish", "expected_categories": ["banking_fraud", "phishing"], "expected_stance": "potentially_facilitating"}
+{"text": "Kisi ko bhi OTP mat batana, bank kabhi nahi maangta", "language": "hinglish", "expected_categories": [], "expected_stance": "warning"}
+{"text": "Meeting 5 baje hai, doc bhej do", "language": "hinglish", "expected_categories": [], "expected_stance": "none"}
+{"text": "Dear customer, your SBI rewards points worth Rs 9850 are expiring today. Redeem now at hxxp://sbi-rewards-claim[.]xyz", "language": "english", "expected_categories": ["banking_fraud", "phishing", "suspicious_urls"], "expected_stance": "potentially_facilitating"}
+{"text": "Work from home part time job! Earn Rs 2000-5000 daily by liking YouTube videos. Contact on Telegram @hr_priya_global", "language": "english", "expected_categories": ["fake_job_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "Guaranteed 300% returns in 7 days on crypto arbitrage trading. Send minimum 500 USDT to start earning immediately", "language": "english", "expected_categories": ["investment_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "Send me 10000 INR immediately or I will leak your private webcam recording to all your contacts on Instagram and Facebook", "language": "english", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "Electricity bill unpaid! Power supply will be disconnected tonight at 9:30 PM. Call officer Sharma immediately at 9876543210", "language": "english", "expected_categories": ["banking_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Download this apk file to claim your free PM Kisan Yojana 6000 rupees installment", "language": "english", "expected_categories": ["malware_indicators", "phishing"], "expected_stance": "potentially_facilitating"}
+{"text": "Public alert: Never share your OTP, UPI PIN, or bank passwords with anyone. Banks never ask for credentials.", "language": "english", "expected_categories": [], "expected_stance": "warning"}
+{"text": "Beware of fake Telegram channels promising guaranteed returns on stock options trading. They take your money and block you.", "language": "english", "expected_categories": ["investment_scams"], "expected_stance": "warning"}
+{"text": "Do not download any APK files sent on WhatsApp claiming to be electricity bill updates. It is a Trojan rat.", "language": "english", "expected_categories": ["malware_indicators"], "expected_stance": "warning"}
+{"text": "Scam alert! Cyber fraudsters are sending fake courier delivery SMS with malicious apk links.", "language": "english", "expected_categories": ["phishing", "malware_indicators"], "expected_stance": "warning"}
+{"text": "I lost 45,000 rupees yesterday when a caller pretending to be FedEx told me drugs were found in my parcel and made me transfer money.", "language": "english", "expected_categories": ["banking_fraud"], "expected_stance": "reporting"}
+{"text": "Has anyone received this message about SBI KYC update? Looks like a phishing attempt to me.", "language": "english", "expected_categories": ["phishing"], "expected_stance": "discussing"}
+{"text": "In our cybersecurity class today, we analyzed how phishing kits harvest OTPs using fake login portals.", "language": "english", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "Please review the quarterly financial statements and share your feedback before Monday's board meeting.", "language": "english", "expected_categories": [], "expected_stance": "none"}
+{"text": "Can you send the delivery tracking number for the courier package dispatched yesterday?", "language": "english", "expected_categories": [], "expected_stance": "none"}
+{"text": "The server deployment is scheduled for 11 PM tonight. Please ensure all database migrations are reviewed.", "language": "english", "expected_categories": [], "expected_stance": "none"}
+{"text": "प्रिय ग्राहक, आपका बैंक खाता 24 घंटे में ब्लॉक हो जाएगा। तुरंत पैन कार्ड लिंक करने के लिए यहाँ क्लिक करें।", "language": "hindi", "expected_categories": ["banking_fraud", "phishing"], "expected_stance": "potentially_facilitating"}
+{"text": "घर बैठे पार्ट टाइम जॉब करें, केवल होटल रेटिंग देकर रोज़ाना ₹3000 से ₹5000 कमाएँ। टेलीग्राम पर संपर्क करें।", "language": "hindi", "expected_categories": ["fake_job_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "बधाई हो! आपकी ₹25,00,000 की केबीसी लॉटरी लगी है। राशि प्राप्त करने के लिए पंजीकरण शुल्क ₹12,500 तुरंत जमा करें।", "language": "hindi", "expected_categories": ["investment_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "आपके बिजली बिल का भुगतान बकाया है। आज रात 10 बजे बिजली काट दी जाएगी। इस नंबर पर तुरंत संपर्क करें: 9812345678", "language": "hindi", "expected_categories": ["banking_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "अगर तुमने मुझे 20,000 रुपये नहीं भेजे तो मैं तुम्हारी यह तस्वीरें सोशल मीडिया पर वायरल कर दूंगा।", "language": "hindi", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "सावधान: बैंक कभी भी आपका ओटीपी, पासवर्ड या यूपीआई पिन नहीं मांगता। किसी अनजान व्यक्ति को ओटीपी न बताएं।", "language": "hindi", "expected_categories": [], "expected_stance": "warning"}
+{"text": "सतर्क रहें! व्हाट्सएप पर आने वाले किसी भी अज्ञात एपीके (APK) फाइल को डाउनलोड न करें, यह मोबाइल हैक कर सकता है।", "language": "hindi", "expected_categories": ["malware_indicators"], "expected_stance": "warning"}
+{"text": "फेक टेलीग्राम ग्रुप्स में पैसे डबल करने वाली स्कीमों से दूर रहें, यह पूरी तरह से फ्रॉड है।", "language": "hindi", "expected_categories": ["investment_scams"], "expected_stance": "warning"}
+{"text": "कल मेरे खाते से 30,000 रुपये कट गए जब एक व्यक्ति ने बिजली अधिकारी बनकर मुझसे ऐप डाउनलोड करवाई।", "language": "hindi", "expected_categories": ["banking_fraud"], "expected_stance": "reporting"}
+{"text": "क्या किसी को मालूम है कि साइबर सेल में ऑनलाइन फ्रॉड की शिकायत 1930 पर कैसे दर्ज कराई जाती है?", "language": "hindi", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "नमस्ते, आज शाम की मीटिंग 6 बजे होगी। कृपया समय पर प्रेजेंटेशन तैयार रखें।", "language": "hindi", "expected_categories": [], "expected_stance": "none"}
+{"text": "कल का ट्रेन का टिकट कन्फर्म हो गया है, मैं पीडीएफ व्हाट्सएप पर भेज रहा हूँ।", "language": "hindi", "expected_categories": [], "expected_stance": "none"}
+{"text": "दुकान के लिए नया सामान आ गया है, बिल चेक करके पेमेंट कर दीजिए।", "language": "hindi", "expected_categories": [], "expected_stance": "none"}
+{"text": "प्रिय ग्राहक, तुमचे बँक खाते केवायसी अपडेट न केल्यामुळे तात्पुरते बंद करण्यात आले आहे. त्वरित सुरू करण्यासाठी खालील लिंकवर क्लिक करा.", "language": "marathi", "expected_categories": ["banking_fraud", "phishing"], "expected_stance": "potentially_facilitating"}
+{"text": "घरबसल्या अर्धवेळ काम करून दररोज ₹2000 ते ₹5000 कमवा. यूट्यूब व्हिडिओ लाईक करा आणि लगेच पैसे मिळवा.", "language": "marathi", "expected_categories": ["fake_job_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "शेअर मार्केटमध्ये 100% खात्रीशीर नफा मिळवा. ₹10,000 गुंतवा आणि एका आठवड्यात ₹50,000 मिळवा.", "language": "marathi", "expected_categories": ["investment_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "तुमचे वीज बिल भरले नसल्यामुळे आज रात्री वीजपुरवठा खंडित केला जाईल. ताबडतोब या नंबरवर कॉल करा.", "language": "marathi", "expected_categories": ["banking_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "उद्या दुपारपर्यंत पैसे दिले नाहीत तर तुला आणि तुझ्या कुटुंबाला संपवून टाकीन.", "language": "marathi", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "सावधान! बँकेचा अधिकारी सांगून कोणीही फोन केल्यास आपला ओटीपी किंवा यूपीआय पिन कोणालाही देऊ नका.", "language": "marathi", "expected_categories": [], "expected_stance": "warning"}
+{"text": "वीज बिल किंवा कुरिअरच्या नावाखाली येणाऱ्या कोणत्याही संशयास्पद लिंकवर क्लिक करू नका, हे फसवणुकीचे प्रकार आहेत.", "language": "marathi", "expected_categories": ["phishing"], "expected_stance": "warning"}
+{"text": "पार्ट टाईम जॉबच्या नावाखाली टास्क पूर्ण करण्यासाठी पैसे मागणाऱ्या टेलिग्राम ग्रुप्सपासून सावध राहा.", "language": "marathi", "expected_categories": ["fake_job_scams"], "expected_stance": "warning"}
+{"text": "माझ्या मित्राची टेलिग्रामवरील टास्क फ्रॉडमध्ये 1 लाख रुपयांची फसवणूक झाली, आम्ही पोलिसात तक्रार दिली आहे.", "language": "marathi", "expected_categories": ["fake_job_scams"], "expected_stance": "reporting"}
+{"text": "सायबर गुन्हेगारी रोखण्यासाठी महा सायबर सेलने नवीन मार्गदर्शक सूचना जारी केल्या आहेत.", "language": "marathi", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "आज संध्याकाळी आईच्या औषधांची यादी पाठवतो, येताना मेडिकलमधून घेऊन ये.", "language": "marathi", "expected_categories": [], "expected_stance": "none"}
+{"text": "उद्याच्या प्रोजेक्टच्या कामासाठी सर्व कागदपत्रे ईमेलवर पाठवून दिली आहेत, तपासून घ्या.", "language": "marathi", "expected_categories": [], "expected_stance": "none"}
+{"text": "पुढच्या आठवड्यात गावी जायचे नियोजन आहे, गाडीचे बुकिंग करून ठेवूया.", "language": "marathi", "expected_categories": [], "expected_stance": "none"}
+{"text": "Aapka 50000 ka pre-approved loan pass ho gaya hai. Processing fee 1500 is UPI id par transfer karein", "language": "hinglish", "expected_categories": ["banking_fraud", "upi_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Special task based earning: YouTube channel subscribe karo aur per task 150 rs paao. Telegram join karo", "language": "hinglish", "expected_categories": ["fake_job_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "Dear user, electricity bill update pending. Your power will be disconnected at 9 PM. Call 9988776655 immediately", "language": "hinglish", "expected_categories": ["banking_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Crypto future trading VIP group! Join now for 10x sure shot signals. Send 100 USDT to activate membership", "language": "hinglish", "expected_categories": ["investment_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "Police FIR registered on your Aadhaar card for money laundering. Immediate settlement ke liye 50000 pay karo warna arrest warrant niklega", "language": "hinglish", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Aapke bank account me 25000 credit karne ke liye ye OTP aur UPI PIN enter karo", "language": "hinglish", "expected_categories": ["otp_theft", "upi_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Dhyan rahe, paise receive karne ke liye kabhi bhi UPI PIN enter nahi karna padta", "language": "hinglish", "expected_categories": ["upi_fraud"], "expected_stance": "warning"}
+{"text": "Dosto koi bhi unknown number se aayi APK file install mat karna, phone hack ho sakta hai", "language": "hinglish", "expected_categories": ["malware_indicators"], "expected_stance": "warning"}
+{"text": "Telegram par work from home daily income wale saare channels fake aur scam hote hain, bach ke raho", "language": "hinglish", "expected_categories": ["fake_job_scams"], "expected_stance": "warning"}
+{"text": "Mera dost OLX par bike bech raha tha aur scammer ne QR code scan karwake uske account se 20000 uda diye", "language": "hinglish", "expected_categories": ["upi_fraud"], "expected_stance": "reporting"}
+{"text": "Aaj kal bohot zyada fake courier delivery SMS aa rahe hain with suspicious apk links", "language": "hinglish", "expected_categories": ["phishing"], "expected_stance": "discussing"}
+{"text": "Cybercrime portal par report karne ke baad bank account freeze ho sakta hai kya?", "language": "hinglish", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "Bhai sham ko gym chalte hain, 7 baje ready rehna", "language": "hinglish", "expected_categories": [], "expected_stance": "none"}
+{"text": "Code review complete kar diya hai, PR merge kar lo", "language": "hinglish", "expected_categories": [], "expected_stance": "none"}
+{"text": "Swiggy se khana order kar raha hoon, kisi ko kuch chahiye kya?", "language": "hinglish", "expected_categories": [], "expected_stance": "none"}
+{"text": "Sir transaction unblock karne ke liye abhi 6 digit OTP share karein", "language": "hinglish", "expected_categories": ["otp_theft"], "expected_stance": "potentially_facilitating"}
+{"text": "कृपया आपके मोबाइल पर आया ओटीपी तुरंत बताएं ताकि सत्यापन पूरा हो सके।", "language": "hindi", "expected_categories": ["otp_theft"], "expected_stance": "potentially_facilitating"}
+{"text": "तुमच्या फोनवर आलेला ओटीपी सांगा नाहीतर व्यवहार रद्द होईल.", "language": "marathi", "expected_categories": ["otp_theft"], "expected_stance": "potentially_facilitating"}
+{"text": "Enter the 6-digit OTP sent to your registered mobile number to claim voucher.", "language": "english", "expected_categories": ["otp_theft"], "expected_stance": "potentially_facilitating"}
+{"text": "Ek call aayi thi bank se, OTP maang rahe the par maine nahi diya", "language": "hinglish", "expected_categories": ["otp_theft"], "expected_stance": "reporting"}
+{"text": "माझ्याकडून एकाने फोनवर ओटीपी मागून फसवणूक केली आहे.", "language": "marathi", "expected_categories": ["otp_theft"], "expected_stance": "reporting"}
+{"text": "Urgent: Send the verification code received via SMS immediately.", "language": "english", "expected_categories": ["otp_theft"], "expected_stance": "potentially_facilitating"}
+{"text": "This is CBI officer Sharma. A digital arrest warrant has been issued against you for money laundering.", "language": "english", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "आपके नाम पर 5 फर्जी सिम कार्ड और मनी लॉन्ड्रिंग का केस दर्ज हुआ है, तुरंत पुलिस से संपर्क करें।", "language": "hindi", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "तुमच्या नावावर बेकायदेशीर पार्सल सापडले असून अटक वॉरंट जारी झाले आहे.", "language": "marathi", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Crime branch se notice aaya hai, digital arrest se bachne ke liye fine bharo", "language": "hinglish", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Somebody claiming to be from Mumbai Cyber Police called me and threatened digital arrest.", "language": "english", "expected_categories": ["identity_fraud"], "expected_stance": "reporting"}
+{"text": "मला एकाने पोलिस अधिकारी असल्याचे सांगून धमकावले.", "language": "marathi", "expected_categories": ["identity_fraud"], "expected_stance": "reporting"}
+{"text": "Delhi Police notice: You are placed under digital arrest until verification is complete.", "language": "english", "expected_categories": ["identity_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "Check this defanged link hxxps://sbi-verification-portal[.]xyz/login for security analysis.", "language": "english", "expected_categories": ["suspicious_urls"], "expected_stance": "discussing"}
+{"text": "ये लिंक hxxp://hdfc-bank-rewards[.]top बिल्कुल फर्जी है, सावधान रहें", "language": "hinglish", "expected_categories": ["suspicious_urls"], "expected_stance": "warning"}
+{"text": "संशयास्पद लिंक आढळली: hxxp://electricity-bill-pay[.]club", "language": "marathi", "expected_categories": ["suspicious_urls"], "expected_stance": "warning"}
+{"text": "Found new phishing campaign targeting users via hxxps://pmkisan-yojana-update[.]xyz", "language": "english", "expected_categories": ["suspicious_urls"], "expected_stance": "discussing"}
+{"text": "इस वेबसाइट hxxp://axis-kyc-verify[.]online पर कभी अपनी डिटेल्स न भरें", "language": "hindi", "expected_categories": ["suspicious_urls"], "expected_stance": "warning"}
+{"text": "Shortened phishing link detected: hxxps://bit[.]ly/3xyzBankingRedirect", "language": "english", "expected_categories": ["suspicious_urls"], "expected_stance": "discussing"}
+{"text": "Defanged test IOC: hxxps://fake-courier-tracking[.]tk", "language": "english", "expected_categories": ["suspicious_urls"], "expected_stance": "discussing"}
+{"text": "Send 25,000 INR within 2 hours or I will leak your private webcam recording to all contacts.", "language": "english", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "अगर आज रात तक पैसे नहीं मिले तो तुम्हारी निजी तस्वीरें सोशल मीडिया पर वायरल कर दूंगा।", "language": "hindi", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "पैसे पाठवले नाही तर तुझे खाजगी व्हिडिओ नातेवाईकांना पाठवून देईन अशी धमकी दिली.", "language": "marathi", "expected_categories": ["online_threats"], "expected_stance": "reporting"}
+{"text": "Tera personal video mere paas hai, 15k transfer kar warna leak kar dunga", "language": "hinglish", "expected_categories": ["online_threats"], "expected_stance": "potentially_facilitating"}
+{"text": "Extortion email received threatening to release sensitive camera footage.", "language": "english", "expected_categories": ["online_threats"], "expected_stance": "reporting"}
+{"text": "Sir aapke account me 2000 refund credit hoga, apna UPI PIN daalo receive karne ke liye", "language": "hinglish", "expected_categories": ["upi_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "पैसे मिळवण्यासाठी यूपीआई पिन टाकण्याची आवश्यकता नसते, फसवणूक टाळा.", "language": "marathi", "expected_categories": ["upi_fraud"], "expected_stance": "warning"}
+{"text": "To claim your cashback of Rs 500, scan this QR code and approve the request.", "language": "english", "expected_categories": ["upi_fraud"], "expected_stance": "potentially_facilitating"}
+{"text": "OLX buyer ne QR code bheja aur bola scan karke PIN daalo to paise aayenge.", "language": "hinglish", "expected_categories": ["upi_fraud"], "expected_stance": "reporting"}
+{"text": "If financial fraud happens, call National Cybercrime Helpline 1930 immediately to freeze funds.", "language": "english", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "साइबर फ्रॉड की शिकायत के लिए 1930 हेल्पलाइन पर तुरंत कॉल करें या पोर्टल पर दर्ज करें।", "language": "hindi", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "सायबर सेलमध्ये तक्रार कशी नोंदवायची याबद्दल माहिती हवी आहे.", "language": "marathi", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "Discussion on latest UPI fraud trends and how to lodge complaints on cybercrime portal.", "language": "english", "expected_categories": ["cybercrime_discussion"], "expected_stance": "discussing"}
+{"text": "Courier tracking app install karne ke liye is link se download apk karo", "language": "hinglish", "expected_categories": ["malware_indicators"], "expected_stance": "potentially_facilitating"}
+{"text": "कृषि अधिकारी बनकर एकाने मला संशयास्पद एपीके डाउनलोड करण्यास सांगितले.", "language": "marathi", "expected_categories": ["malware_indicators"], "expected_stance": "reporting"}
+{"text": "Security warning: Trojan rat distributed via fake banking apk files.", "language": "english", "expected_categories": ["malware_indicators"], "expected_stance": "warning"}
+{"text": "Join our VIP stock trading group on Telegram, 100% guaranteed profit every trade.", "language": "english", "expected_categories": ["investment_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "शेअर मार्केटमध्ये पैसे डबल करून देतो म्हणून 50,000 रुपयांची फसवणूक केली.", "language": "marathi", "expected_categories": ["investment_scams"], "expected_stance": "reporting"}
+{"text": "Earn Rs 4000 daily with part time work from home review job on Telegram.", "language": "english", "expected_categories": ["fake_job_scams"], "expected_stance": "potentially_facilitating"}
+{"text": "Please bring the project design report to the team meeting at 3 PM today.", "language": "english", "expected_categories": [], "expected_stance": "none"}
+{"text": "आई, मी संध्याकाळी सात वाजता घरी येईन, काळजी करू नकोस.", "language": "marathi", "expected_categories": [], "expected_stance": "none"}
+{"text": "कल सुबह 10 बजे हमारी क्लाइंट के साथ ज़ूम कॉल शेड्यूल्ड है।", "language": "hindi", "expected_categories": [], "expected_stance": "none"}
+{"text": "Bhai shaam ko cricket khelne chalenge ground pe?", "language": "hinglish", "expected_categories": [], "expected_stance": "none"}
+{"text": "Stay vigilant against unsolicited calls: real banks never ask for personal PINs or passwords.", "language": "english", "expected_categories": [], "expected_stance": "warning"}
+{"text": "सावधान! अनोळखी व्यक्तीशी बोलताना आपली बँक खात्याची माहिती कधीही उघड करू नका.", "language": "marathi", "expected_categories": [], "expected_stance": "warning"}
+{"text": "सतर्क रहें: सोशल मीडिया पर आकर्षक पार्ट टाइम ऑफर्स अक्सर जालसाजी हो सकती हैं।", "language": "hindi", "expected_categories": [], "expected_stance": "warning"}
+{"text": "Dhyan rahe kisi anjaan number par call karke apni private details mat batana.", "language": "hinglish", "expected_categories": [], "expected_stance": "warning"}

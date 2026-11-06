@@ -1,0 +1,28 @@
+VERSION=1.0.0
+PURPOSE=Threat intelligence, fraud prevention, and behavioral analytics
+TITLE=Telegram Threat Intelligence (TTI) Informed Consent Charter
+
+1. CORE MISSION & GUARANTEES:
+The TTI Platform assists cybersecurity researchers and consented individuals in detecting
+fraud, scams, phishing, and online extortion.
+We strictly operate under the following invariants:
+- NO HIDDEN SURVEILLANCE: We do not scrape private chats, unauthorized channels, or non-consenting users.
+- TELEGRAM PRIVACY MODE: The bot cannot see or read messages from non-consenting users in groups.
+- ZERO RETENTION WITHOUT CONSENT: Messages from non-consenting users in approved groups are dropped immediately.
+- PURPOSE-SPECIFIC & REVOCABLE: You choose exactly what is analyzed. You can revoke consent at any time.
+
+2. GRANULAR PERMISSIONS (ALL DEFAULT OFF):
+- message_analysis: Authorizes analyzing text you submit via /submit for fraud and threat indicators.
+- keyword_detection: Authorizes scanning your consented text against threat keyword dictionaries.
+- nlp_analysis: Authorizes extracting entities (UPI IDs, bank IFSC, URLs, phone numbers) from consented text.
+- activity_analytics: Authorizes calculating your own message frequency baselines (never comparing against others).
+- timeline: Authorizes chronological threat activity timeline generation.
+- reports: Authorizes including your consented threat telemetry in formal case reports.
+- approved_group_context: Authorizes processing messages you post in verified, monitored groups.
+
+3. YOUR STATUTORY RIGHTS:
+- Review your active consent and toggle permissions at any time with /consent.
+- Revoke all processing immediately with /revoke.
+- Export all data stored about you with /export.
+- Permanently purge your records and telemetry with /delete_me.
+

@@ -1,0 +1,86 @@
+category: phishing
+display_name: Phishing and Lure Campaigns
+description: Fraudulent lures directing targets to deceptive websites, reward redemption,
+  or fake KYC portals.
+default_severity: HIGH
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: phishing_kyc_rewards_link
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - click link
+    - update link
+    - Redeem now at
+    - यहाँ क्लिक करें
+    - लिंकवर क्लिक करा
+    - courier delivery
+    proximity:
+    - - courier
+      - sms
+      - 6
+    - - courier
+      - link
+      - 6
+    - - courier
+      - apk
+      - 6
+    - - delivery
+      - sms
+      - 5
+    - - delivery
+      - link
+      - 5
+    - - link
+      - click
+      - 4
+    - - link
+      - update
+      - 4
+    - - लिंक
+      - क्लिक
+      - 4
+    - - पैन
+      - क्लिक
+      - 5
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Urgent call-to-action directing user to click an external
+    link for updates, parcel delivery, or rewards
+  is_enabled: true
+  is_reviewed: false
+- rule_id: phishing_pm_kisan_lure
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - PM Kisan
+    - पीएम किसान
+    - Kisan Yojana
+    - योजना हप्ता
+    proximity:
+    - - kisan
+      - yojana
+      - 4
+    - - kisan
+      - installment
+      - 4
+    - - किसान
+      - योजना
+      - 4
+  weight: 1.5
+  default_severity: HIGH
+  explanation_template: Lure exploiting government subsidy or welfare schemes to induce
+    clicks
+  is_enabled: true
+  is_reviewed: false

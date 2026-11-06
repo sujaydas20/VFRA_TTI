@@ -1,0 +1,58 @@
+category: otp_theft
+display_name: OTP and Credential Theft
+description: Direct solicitation or theft of One-Time Passwords (OTPs) and secondary
+  authentication factors.
+default_severity: CRITICAL
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: otp_solicitation_phrase
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - share OTP
+    - enter OTP
+    - send OTP
+    - ओटीपी बताओ
+    - ओटीपी सांगा
+    proximity:
+    - - otp
+      - enter
+      - 4
+    - - otp
+      - share
+      - 4
+    - - otp
+      - pin
+      - 4
+    - - otp
+      - batao
+      - 4
+    - - otp
+      - bhejo
+      - 4
+  weight: 2.5
+  default_severity: CRITICAL
+  explanation_template: Solicitation to share or enter one-time authorization credentials
+  is_enabled: true
+  is_reviewed: false
+- rule_id: otp_harvesting_regex
+  rule_type: regex
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    regex: (?i)\b(?:enter|share|send|forward|batao|bhejo|सांगा|बताओ)\b.{1,20}\b(?:otp|verification\s*code)\b
+  weight: 2.0
+  default_severity: CRITICAL
+  explanation_template: Pattern indicating an attempt to harvest one-time authentication
+    codes
+  is_enabled: true
+  is_reviewed: false

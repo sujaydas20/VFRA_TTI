@@ -1,0 +1,47 @@
+category: identity_fraud
+display_name: Identity Theft and Official Impersonation
+description: Fabricated police FIRs, digital arrest threats, and extortion under false
+  legal accusations.
+default_severity: CRITICAL
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: police_fir_digital_arrest
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - digital arrest
+    - police FIR
+    - money laundering
+    - arrest warrant
+    - arrest warrant niklega
+    - डिजिटल अरेस्ट
+    - मनी लॉन्ड्रिंग
+    - अटक वॉरंट
+    proximity:
+    - - arrest
+      - settlement
+      - 6
+    - - police
+      - warrant
+      - 5
+    - - fir
+      - settle
+      - 5
+    - - डिजिटल
+      - अरेस्ट
+      - 4
+    - - मनी लॉन्ड्रिंग
+      - केस
+      - 5
+  weight: 2.5
+  default_severity: CRITICAL
+  explanation_template: Coercive official impersonation threatening arrest or money
+    laundering prosecution
+  is_enabled: true
+  is_reviewed: false

@@ -1,0 +1,74 @@
+category: investment_scams
+display_name: Investment and Lottery Scams
+description: Deceptive high-yield investment programs, fake crypto arbitrage schemes,
+  and fraudulent lottery awards.
+default_severity: HIGH
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: crypto_arbitrage_guarantee
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - guaranteed returns
+    - crypto arbitrage
+    - VIP signals
+    - trading group
+    - 10x returns
+    proximity:
+    - - guaranteed
+      - returns
+      - 4
+    - - crypto
+      - signals
+      - 5
+    - - trading
+      - vip
+      - 4
+    - - usdt
+      - earning
+      - 5
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Unrealistic guaranteed return promises in cryptocurrency or
+    stock trading
+  is_enabled: true
+  is_reviewed: false
+- rule_id: lottery_kbc_fee_scam
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - KBC lottery
+    - केबीसी लॉटरी
+    - लॉटरी लगी
+    - पैसे डबल
+    - खात्रीशीर नफा
+    proximity:
+    - - kbc
+      - lottery
+      - 4
+    - - lottery
+      - won
+      - 4
+    - - पैसे
+      - डबल
+      - 4
+    - - शेअर
+      - नफा
+      - 5
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Advance fee fraud claiming victim won a lottery or guaranteed
+    stock doubling scheme
+  is_enabled: true
+  is_reviewed: false

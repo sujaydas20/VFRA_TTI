@@ -1,0 +1,108 @@
+category: banking_fraud
+display_name: Banking and Utility Impersonation Fraud
+description: Impersonation of banks, electricity boards, or courier companies with
+  threats of disconnection or suspension.
+default_severity: HIGH
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: bank_kyc_suspension
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - KYC expire
+    - account band
+    - account blocked
+    - केवायसी अपडेट
+    - खाते ब्लॉक
+    - खाता ब्लॉक
+    - rewards points
+    proximity:
+    - - kyc
+      - expire
+      - 4
+    - - account
+      - block
+      - 4
+    - - खाता
+      - ब्लॉक
+      - 5
+    - - केवायसी
+      - अपडेट
+      - 4
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Urgent threat claiming bank account suspension or expiring
+    reward points due to KYC
+  is_enabled: true
+  is_reviewed: false
+- rule_id: utility_electricity_disconnect
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - electricity bill
+    - power disconnect
+    - बिजली बिल
+    - बिजली काट
+    - वीज बिल
+    - वीज खंडित
+    proximity:
+    - - electricity
+      - disconnected
+      - 5
+    - - power
+      - disconnected
+      - 5
+    - - बिजली
+      - काट
+      - 6
+    - - वीज
+      - खंडित
+      - 6
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Urgent fake electricity disconnection threat demanding immediate
+    phone call or payment
+  is_enabled: true
+  is_reviewed: false
+- rule_id: loan_courier_impersonation
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - pre-approved loan
+    - customs officer
+    - parcel seized
+    - drugs in parcel
+    - बिजली अधिकारी
+    - कूरियर अधिकारी
+    proximity:
+    - - fedex
+      - parcel
+      - 6
+    - - customs
+      - parcel
+      - 6
+    - - drugs
+      - parcel
+      - 6
+  weight: 1.5
+  default_severity: HIGH
+  explanation_template: Impersonation of customs, police, courier, or loan processing
+    agent
+  is_enabled: true
+  is_reviewed: false

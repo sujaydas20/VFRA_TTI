@@ -1,0 +1,66 @@
+category: online_threats
+display_name: Online Threats and Blackmail
+description: Blackmail, sextortion, physical bodily harm threats, and coercive extortion.
+default_severity: CRITICAL
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: sextortion_webcam_blackmail
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - webcam leak
+    - private video
+    - private photos
+    - तस्वीरें वायरल
+    - व्हिडिओ व्हायरल
+    proximity:
+    - - webcam
+      - leak
+      - 5
+    - - private
+      - leak
+      - 5
+    - - video
+      - viral
+      - 5
+    - - तस्वीरें
+      - वायरल
+      - 5
+  weight: 3.0
+  default_severity: CRITICAL
+  explanation_template: Coercive extortion threatening unauthorized distribution of
+    intimate imagery
+  is_enabled: true
+  is_reviewed: false
+- rule_id: physical_violence_threat
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - kill you
+    - जान से मार
+    - जीवे मारण्याची धमकी
+    - घर आकर मारूँगा
+    proximity:
+    - - kill
+      - family
+      - 5
+    - - जान
+      - मार
+      - 4
+  weight: 3.0
+  default_severity: CRITICAL
+  explanation_template: Explicit threat of physical violence or harm to victim or
+    family
+  is_enabled: true
+  is_reviewed: false

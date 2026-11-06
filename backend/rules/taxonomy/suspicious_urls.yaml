@@ -1,0 +1,28 @@
+category: suspicious_urls
+display_name: Suspicious URLs and Lookalike Domains
+description: Indicators for defanged, shortened, or typosquatted URLs associated with
+  fraud infrastructure.
+default_severity: HIGH
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: defanged_phishing_link
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - hxxp://
+    - hxxps://
+    - '[.]xyz'
+    - '[.]top'
+    - '[.]tk'
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Defanged URL indicator pointing to suspicious top-level domain
+    infrastructure
+  is_enabled: true
+  is_reviewed: false

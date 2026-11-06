@@ -99,6 +99,7 @@ backend/app/database/*.db
 # IDE & OS Metadata
 .idea/
 .vscode/
+New folder/
 *.swp
 *.swo
 *~

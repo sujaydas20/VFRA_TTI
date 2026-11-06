@@ -1,0 +1,78 @@
+category: fake_job_scams
+display_name: Fake Job and Task Scams
+description: Deceptive job offerings promising high daily earnings for liking videos,
+  writing reviews, or completing Telegram tasks.
+default_severity: MEDIUM
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: task_scam_video_reviews
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - work from home
+    - part time job
+    - daily income
+    - task earning
+    - पार्ट टाइम जॉब
+    - होटल रेटिंग
+    - टास्क पूर्ण
+    - यूट्यूब लाईक
+    proximity:
+    - - work from home
+      - income
+      - 6
+    - - part time
+      - job
+      - 4
+    - - youtube
+      - subscribe
+      - 5
+    - - youtube
+      - like
+      - 5
+    - - video
+      - like
+      - 4
+    - - rating
+      - earn
+      - 5
+  weight: 2.0
+  default_severity: HIGH
+  explanation_template: Part-time task scam offering daily compensation for trivial
+    digital engagement
+  is_enabled: true
+  is_reviewed: false
+- rule_id: task_scam_telegram_recruitment
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - Telegram contact
+    - Telegram job
+    - टेलीग्राम संपर्क
+    proximity:
+    - - telegram
+      - contact
+      - 4
+    - - telegram
+      - join
+      - 4
+    - - telegram
+      - salary
+      - 5
+  weight: 1.2
+  default_severity: MEDIUM
+  explanation_template: Directing candidates to untraceable Telegram handles for task
+    onboarding
+  is_enabled: true
+  is_reviewed: false

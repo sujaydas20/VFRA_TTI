@@ -1,0 +1,42 @@
+category: cybercrime_discussion
+display_name: Cybercrime Awareness and Academic Discussion
+description: Educational discussions, reporting inquiries, or law enforcement reporting
+  mechanisms.
+default_severity: INFO
+is_active: true
+taxonomy_version: 2026.03.1
+rules:
+- rule_id: cybercrime_helpline_discussion
+  rule_type: phrase
+  languages:
+  - en
+  - hi
+  - mr
+  - hinglish
+  pattern_payload:
+    phrases:
+    - cybersecurity
+    - cyber cell
+    - cyber crime
+    - सायबर सेल
+    - 1930 हेल्पलाइन
+    - cybercrime portal
+    proximity:
+    - - '1930'
+      - report
+      - 5
+    - - '1930'
+      - शिकायत
+      - 5
+    - - '1930'
+      - तक्रार
+      - 5
+    - - cybercrime
+      - report
+      - 5
+  weight: 1.0
+  default_severity: INFO
+  explanation_template: Discussion regarding cybersecurity awareness, education, or
+    statutory reporting hotlines
+  is_enabled: true
+  is_reviewed: false

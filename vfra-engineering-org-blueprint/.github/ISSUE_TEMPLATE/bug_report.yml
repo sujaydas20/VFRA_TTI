@@ -1,0 +1,83 @@
+name: "Bug Report"
+description: "Report a defect, crash, or unexpected behavior in a VFRA Engineering project"
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for filing a bug report.
+        Please provide as much relevant technical context as possible to help our team diagnose and resolve the issue quickly.
+        **CRITICAL**: Never include real credentials, API tokens, client PII, or raw evidence dumps in this ticket.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component Affected
+      description: Select the primary subsystem experiencing the defect.
+      options:
+        - "Backend API (FastAPI / Core)"
+        - "Connectors Layer (Telegram / DarkWeb Stubs)"
+        - "Ingestion & Sanitization Pipeline"
+        - "Database & Migrations (PostgreSQL / Alembic)"
+        - "Evidence Storage & Hashing"
+        - "Frontend Dashboard (React / TypeScript)"
+        - "Docker / Infrastructure / CI"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the defect is.
+      placeholder: "When calling endpoint X with parameter Y, an unhandled exception is thrown..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Start backend with `uvicorn app.main:app`
+        2. Execute request `GET /api/v1/...`
+        3. Observe response status code and error payload
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what should have occurred.
+      placeholder: "Expected HTTP 400 Bad Request with structured error envelope..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: security_impact
+    attributes:
+      label: Potential Security Impact
+      description: Does this bug risk credential leakage, cross-tenant data access, or untrusted payload execution?
+      options:
+        - "No security impact identified"
+        - "Potential Tenant Isolation risk"
+        - "Potential Input Sanitization bypass"
+        - "Potential Credential / Evidence exposure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Include relevant operating system, runtime, and package versions.
+      value: |
+        - OS: Windows 11 / Linux
+        - Python version: 3.13 / 3.12
+        - Node version: 24.12
+        - Docker version (if applicable):
+    validations:
+      required: true
